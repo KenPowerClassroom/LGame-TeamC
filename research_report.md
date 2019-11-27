@@ -2,7 +2,7 @@
 ## Introduction
 
 ### Who are we
-- team-member-name (github-username)
+- Richard Fleming [Richard-Fleming](https://github.com/Richard-Fleming)
 - team-member-name (github-username)
 - team-member-name (github-username)
 - Mantas Zalnierius [MantasZalnierius](https://github.com/MantasZalnierius)
