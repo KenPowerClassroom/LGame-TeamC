@@ -46,3 +46,5 @@ In order to win and end the game a player must be forced into a position where t
 no legal positions in which they can move their L piece.
 
 ## Playing strategies
+
+## References
