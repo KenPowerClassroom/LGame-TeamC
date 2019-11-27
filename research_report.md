@@ -30,15 +30,13 @@ L shaped object. There are also two neutral objects which take up a single cell 
 
 Players take turns alternatively having two options on their turns, one mandatory and on optional. These are:
 
-1. The mandatory move (moving the L piece)
-
+1. **The mandatory move (moving the L piece)**
   This is the crutch the whole game is based off, hence it's name. On their turn
   players must move their friendly L piece, making any series of flips and turns,
   and drop it on an empty position. (it is invalid to drop the piece back in it's previous 
   position or layered on top of an opponents L piece).
 
-1. The optional move (moving neutral pieces)
-
+1. **The optional move (moving neutral pieces)**
   The neutral pieces are owned by no one and either can be moved at the end of any players
   turn to any empty cell by the player whose turn it currently is. Either L piece can not be layered over these neutral pieces.
 
