@@ -19,4 +19,32 @@ The L Game Was created by Edward De Bono in a book he released in 1967 called â€
 The game itself is a two player game. The game is played on a board that is has a 4x4 square grid. Each player has their own L shape that has a size of 3x2 square grid. There is also 2 neutral pieces that have a size of 1x1 on the square grid. The game itself is really simple to play, but very hard to master. The reason for this is because there are multiple strategies to play the game.  And some of these strategies work only certain scenarios in the L Game and this is why this game is considered to be a very strategic game. You have to think ahead and plan out what you want to do to defeat your opponent. 
 
 ## Game rules
+
+The L game is played on a 4x4 game board. Each player has ownership of an individual 
+L shaped object. There are also two neutral objects which take up a single cell each.
+
+![Board layout](https://user-images.githubusercontent.com/45257691/69731522-f29a1a80-1121-11ea-93ca-b6e2823e5f05.png)
+
+
+### Turns
+
+Players take turns alternatively having two options on their turns, one mandatory and on optional. These are:
+
+1. The mandatory move (moving the L piece)
+
+  This is the crutch the whole game is based off, hence it's name. On their turn
+  players must move their friendly L piece, making any series of flips and turns,
+  and drop it on an empty position. (it is invalid to drop the piece back in it's previous 
+  position or layered on top of an opponents L piece).
+
+1. The optional move (moving neutral pieces)
+
+  The neutral pieces are owned by no one and either can be moved at the end of any players
+  turn to any empty cell by the player whose turn it currently is. Either L piece can not be layered over these neutral pieces.
+
+#### Win Conditions
+
+In order to win and end the game a player must be forced into a position where there are
+no legal positions in which they can move their L piece.
+
 ## Playing strategies
