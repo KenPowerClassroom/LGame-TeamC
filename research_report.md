@@ -46,5 +46,20 @@ In order to win and end the game a player must be forced into a position where t
 no legal positions in which they can move their L piece.
 
 ## Playing strategies
+### Basic Strategies
+- One basic strategy is blocking off a 3x3 grid in the corner of the board using an L and Neutral piece,
+and then manipulating the other neutral piece to eliminate your opponents possible moves.
+- Another strategy is to think about the grid as two halves, and ty to lock your opponent in one half of
+the grid.
+
+### Guiding Strategic Principles
+#### These Principles won't win you the game, but they'll help you not lose for a while.
+- Always keep a neutral piece adjacent to your L piece.
+- Take a corner position whenever you can.
+- Try to have your L piece occupy 3 of the 4 central squares in the grid;
+![3 Central Strat](https://user-images.githubusercontent.com/45153107/69731977-b9ae7580-1122-11ea-807b-fc56d6311ce5.png)
+- Or 2 central squares and no neutral piece occupies any of the squres marked x;
+![2 Central Strat](https://user-images.githubusercontent.com/45153107/69732133-fb3f2080-1122-11ea-9252-c3f1ece522eb.png)
 
 ## References
+- [Vsauce2: The Hardest Easy Game](https://youtu.be/64pA31_WJa0)
