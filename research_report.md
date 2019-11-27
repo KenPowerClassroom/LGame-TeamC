@@ -2,10 +2,10 @@
 ## Introduction
 
 ### Who are we
-- Richard Fleming [Richard-Fleming](https://github.com/Richard-Fleming)
-- team-member-name (github-username)
-- Jack Sinnott [JackSinnott] (https://github.com/JackSinnott)
-- Mantas Zalnierius [MantasZalnierius](https://github.com/MantasZalnierius)
+- Richard Fleming ([Richard-Fleming](https://github.com/Richard-Fleming))
+- Denis Becle ([Becle-Denis](https://github.com/Becle-Denis))
+- Jack Sinnott ([JackSinnott](https://github.com/JackSinnott))
+- Mantas Zalnierius ([MantasZalnierius](https://github.com/MantasZalnierius))
 
 ### What is the purpose of this document
 ### Why are we doing this project
