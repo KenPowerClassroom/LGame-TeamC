@@ -5,7 +5,7 @@
 - team-member-name (github-username)
 - team-member-name (github-username)
 - team-member-name (github-username)
-- team-member-name (github-username)
+- Mantas Zalnierius [MantasZalnierius](https://github.com/MantasZalnierius)
 
 ### What is the purpose of this document
 ### Why are we doing this project
