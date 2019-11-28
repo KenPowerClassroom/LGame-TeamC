@@ -2,7 +2,12 @@
 
 ## Outline MVP functionality
 
-Describe the simplest version of the application that is useful to the user.
+When the players start the game, the players will see a board that is a 4x4 square grid. Each player has their own L shape that has a size of 3x2 square grid. There is also 2 neutral pieces that have a size of 1x1 on the square grid.
+
+The game will go by a turn by turn basis. When it is one players turn, that player will be able to move their L piece anywhere it is legal to move. Each player cannot move their L piece onto another player’s L piece or on the original position of their L piece on that turn. A player also cannot move their L piece to where a neutral piece is. 
+
+After the players turn is over that player will be able to move a neutral piece wherever they want, but they cannot move this neutral piece onto another L piece or the other neutral piece on the game board. The player will also have a choice of not moving the neutral piece at all and just end their turn if they want. After this, the turn changes to the other player and this order happens until a player cannot move their L piece at all. When a player cannot move the L piece, the other player wins the game.
+
 
 ## List the features of the MVP
 - Player movement
@@ -11,7 +16,6 @@ Describe the simplest version of the application that is useful to the user.
 - Gamestate
 
 ## Out Of Scope
-
  - Menus
  - High end graphics
  - Sound effects
