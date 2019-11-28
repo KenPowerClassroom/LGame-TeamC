@@ -5,14 +5,19 @@
 Describe the simplest version of the application that is useful to the user.
 
 ## List the features of the MVP
-- feature1
-- feature2
-- ...
+- Player movement
+- Check for legal moves
+- Display
+- Gamestate
 
 ## Out Of Scope
 
-Explicity describe what is not part of MVP
-
+ - Menus
+ - High end graphics
+ - Sound effects
+ - Having an AI opponent
+ - Multi platform
+ - HUD
 
 ## List of stories needed to complete the MVP `aim for 8 stories`
 
