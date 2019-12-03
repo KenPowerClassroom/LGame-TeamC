@@ -33,31 +33,47 @@ As a player I need to be able to see the current board configuration so that I c
 
 As a player I need to be able to precisely position my L piece on the game board.
 
+Dependant on: 1.
+
 3. Moving the neutral pieces
 
 As a player I need to have the choice to be able to move the neutral piece at the end of my turn.
+
+Dependant on: 1.
 
 4. Not moving the neutral pieces
 
 As a player I need to be able to end my turn without moving the neutral piece.
 
+Dependant on: 
+
 5. Game over conditions
 
 The game needs to end when the win conditions have been met. 
+
+Dependant on: 1,2,3,4.
 
 6. Check for overlapping pieces
 
 The game needs to check the legality of moves to stop players from overlapping pieces on the board.
 
+Dependant on: 1,2,3.
+
 7. Check that an L piece has been moved to new position
 
 As a player I need to not be able to just place my L piece in the same position as it was in at the start of my turn.
+
+Dependant on: 1,2,3.
 
 8. Alternate turns
 
 As a player I need to be able to end my turn and have my opponent begin their turn.
 
+Dependant on: 1,2,7.
+
 9. Restart the game
 
 As a player I need to be able to restart a new game once the original game has ended.
+
+Dependant on: 5.
 
