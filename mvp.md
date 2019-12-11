@@ -29,57 +29,68 @@ After the players turn is over that player will be able to move a neutral piece 
 
 As a player I need to be able to see the current board configuration so that I can understand my position and figure out my next move.
 
-2. Moving the L pieces (2sp)
+2. Let the player know he/she can move thier L piece (2sp)
 
-As a player I need to be able to precisely position my L piece on the game board.
+As a player I need to when I can move my L piece.
 
 Dependant on: 1.
 
-3. Indicate that players can selact a Neutral Piece
+3. Let the player move their L piece (2sp)
+
+As a player I need to be able to type a position to the console, to move the L piece.
+
+Dependant on: 1.
+
+4. Move the L piece to the new position(2sp)
+
+As a player I need to see my L piece move to that new position.
+
+Dependant on: 1.
+
+5. Indicate that players can selact a Neutral Piece
 
 As a player I need to know when I am allowed to select a neutral piece.
 
 Dependant on: 1. 
 
-4. Allow for the players to select a Neutral Piece
+6. Allow for the players to select a Neutral Piece
 
 As a player I need to be able to select one of the two Neutral Pieces to move them.
 
 Dependant on: 3
 
-5. Allow the player to not move a Neutral Piece
+7. Allow the player to not move a Neutral Piece
 
 As a player I need to be able to choose to not move either of the Neutral Pieces.
 
 Dependant on: 3
 
-6. Moving the Neutral Pieces
+8. Moving the Neutral Pieces
 
 As a player I need to be able to move a Neutral Piece around the board.
 
 Dependant on: 4
 
-7. Game over conditions (2sp)
+9. Game over conditions (2sp)
 
 The game needs to end when the win conditions have been met. 
 
 Dependant on: 1,2,3,4,6,7.
 
-8. Check for overlapping pieces (2sp)
+10. Check for overlapping pieces (2sp)
 
 The game needs to check the legality of moves to stop players from overlapping pieces on the board.
 
 Dependant on: 1,2,3.
 
-9. Check that an L piece has been moved to new position (1sp)
+11. Check that an L piece has been moved to new position (1sp)
 
 As a player I need to not be able to just place my L piece in the same position as it was in at the start of my turn.
 
 Dependant on: 1,2,3.
 
-10. Alternate turns (1sp)
+12. Alternate turns (1sp)
 
 As a player I need to be able to end my turn and have my opponent begin their turn.
 
 Dependant on: 1,2,7.
-
