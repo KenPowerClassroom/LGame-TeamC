@@ -35,31 +35,49 @@ As a player I need to be able to precisely position my L piece on the game board
 
 Dependant on: 1.
 
-3. Moving the neutral pieces (2sp)
+3. Indicate that players can selact a Neutral Piece
 
-As a player I need to have the choice to be able to move the neutral piece at the end of my turn or choosing not to move the piece.
+As a player I need to know when I am allowed to select a neutral piece.
 
 Dependant on: 1. 
 
-5. Game over conditions (2sp)
+4. Allow for the players to select a Neutral Piece
+
+As a player I need to be able to select one of the two Neutral Pieces to move them.
+
+Dependant on: 3
+
+5. Allow the player to not move a Neutral Piece
+
+As a player I need to be able to choose to not move either of the Neutral Pieces.
+
+Dependant on: 3
+
+6. Moving the Neutral Pieces
+
+As a player I need to be able to move a Neutral Piece around the board.
+
+Dependant on: 4
+
+7. Game over conditions (2sp)
 
 The game needs to end when the win conditions have been met. 
 
 Dependant on: 1,2,3,4,6,7.
 
-6. Check for overlapping pieces (2sp)
+8. Check for overlapping pieces (2sp)
 
 The game needs to check the legality of moves to stop players from overlapping pieces on the board.
 
 Dependant on: 1,2,3.
 
-7. Check that an L piece has been moved to new position (1sp)
+9. Check that an L piece has been moved to new position (1sp)
 
 As a player I need to not be able to just place my L piece in the same position as it was in at the start of my turn.
 
 Dependant on: 1,2,3.
 
-8. Alternate turns (1sp)
+10. Alternate turns (1sp)
 
 As a player I need to be able to end my turn and have my opponent begin their turn.
 
