@@ -91,3 +91,31 @@ TEST(StandardBoardRenderer, initialPosition)
 	renderer.renderBoard(board);
 	EXPECT_EQ(capturedOutput.str(), "   A B C D\n1: 3 1 1 0\n2: 0 2 1 0\n3: 0 2 1 0\n4: 0 2 2 4");
 }
+
+TEST(StandardBoardRenderer, invalidNumbers)
+{
+	std::ostringstream capturedOutput;
+	int board[4][4]
+		= { {-4,45,21,5},
+			{-0,-1,6,33},
+			{12,42,15,24},
+			{321,10000,10000000000,-100}
+	};
+	StandardBoardRenderer renderer(capturedOutput);
+	renderer.renderBoard(board);
+	EXPECT_EQ(capturedOutput.str(), "   A B C D\n1: 0 0 0 0\n2: 0 0 0 0\n3: 0 0 0 0\n4: 0 0 0 0");
+}
+
+TEST(StandardBoardRenderer, mixedNumbers)
+{
+	std::ostringstream capturedOutput;
+	int board[4][4]
+		= { {-45,-2,2,0},
+			{42,-12,-6,1},
+			{6,3,-3,-2},
+			{425,1,-500000003345,1}
+	};
+	StandardBoardRenderer renderer(capturedOutput);
+	renderer.renderBoard(board);
+	EXPECT_EQ(capturedOutput.str(), "   A B C D\n1: 0 0 2 0\n2: 0 0 0 1\n3: 0 3 0 0\n4: 0 1 0 1");
+}
