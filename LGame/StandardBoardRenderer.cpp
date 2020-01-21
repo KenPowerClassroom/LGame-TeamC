@@ -1,5 +1,10 @@
 #include "StandardBoardRenderer.h"
 
-void StandardBoardRenderer::renderBoard(std::array<std::array<int, 4>, 4> boardArray)
+StandardBoardRenderer::StandardBoardRenderer(std::ostream& output) 
+	: m_output(output)
+{
+}
+
+void StandardBoardRenderer::renderBoard(int boardArray[4][4])
 {
 }

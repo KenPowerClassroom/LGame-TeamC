@@ -1,8 +1,14 @@
 #pragma once
+#include <iostream>
 #include "BoardRenderer.h"
 
 class StandardBoardRenderer : public BoardRenderer
 {
-	virtual void renderBoard(std::array<std::array<int, 4>, 4> boardArray) override;
+public:
+	StandardBoardRenderer(std::ostream& output);
+	virtual void renderBoard(int boardArray[4][4]) override;
+
+private:
+	std::ostream& m_output;
 };
 

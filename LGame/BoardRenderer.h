@@ -5,6 +5,6 @@
 class BoardRenderer
 {
 public:
-	virtual void renderBoard(std::array<std::array<int, 4>, 4> boardArray) = 0;
+	virtual void renderBoard(int boardArray[4][4]) = 0;
 };
 
