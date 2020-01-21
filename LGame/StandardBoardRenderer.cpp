@@ -30,9 +30,6 @@ void StandardBoardRenderer::renderBoard(int boardArray[4][4])
 			case 4:
 				m_output << "4";
 				break;
-			case 5:
-				m_output << "5";
-				break;
 			default:
 				m_output << "0";
 				break;

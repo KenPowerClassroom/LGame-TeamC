@@ -77,16 +77,17 @@ TEST(StandardBoardRenderer, boardFullOf4)
 	EXPECT_EQ(capturedOutput.str(), "   A B C D\n1: 4 4 4 4\n2: 4 4 4 4\n3: 4 4 4 4\n4: 4 4 4 4");
 }
 
-TEST(StandardBoardRenderer, boardFullOf5)
+
+TEST(StandardBoardRenderer, initialPosition)
 {
 	std::ostringstream capturedOutput;
 	int board[4][4]
-		= { {5,5,5,5},
-			{5,5,5,5},
-			{5,5,5,5},
-			{5,5,5,5}
+		= { {3,1,1,0},
+			{0,2,1,0},
+			{0,2,1,0},
+			{0,2,2,4}
 	};
 	StandardBoardRenderer renderer(capturedOutput);
 	renderer.renderBoard(board);
-	EXPECT_EQ(capturedOutput.str(), "   A B C D\n1: 5 5 5 5\n2: 5 5 5 5\n3: 5 5 5 5\n4: 5 5 5 5");
+	EXPECT_EQ(capturedOutput.str(), "   A B C D\n1: 3 1 1 0\n2: 0 2 1 0\n3: 0 2 1 0\n4: 0 2 2 4");
 }
