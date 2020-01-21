@@ -34,3 +34,59 @@ TEST(StandardBoardRenderer, boardFullOf1)
 	renderer.renderBoard(board);
 	EXPECT_EQ(capturedOutput.str(), "   A B C D\n1: 1 1 1 1\n2: 1 1 1 1\n3: 1 1 1 1\n4: 1 1 1 1");
 }
+
+TEST(StandardBoardRenderer, boardFullOf2)
+{
+	std::ostringstream capturedOutput;
+	int board[4][4]
+		= { {2,2,2,2},
+			{2,2,2,2},
+			{2,2,2,2},
+			{2,2,2,2}
+	};
+	StandardBoardRenderer renderer(capturedOutput);
+	renderer.renderBoard(board);
+	EXPECT_EQ(capturedOutput.str(), "   A B C D\n1: 2 2 2 2\n2: 2 2 2 2\n3: 2 2 2 2\n4: 2 2 2 2");
+}
+
+TEST(StandardBoardRenderer, boardFullOf3)
+{
+	std::ostringstream capturedOutput;
+	int board[4][4]
+		= { {3,3,3,3},
+			{3,3,3,3},
+			{3,3,3,3},
+			{3,3,3,3}
+	};
+	StandardBoardRenderer renderer(capturedOutput);
+	renderer.renderBoard(board);
+	EXPECT_EQ(capturedOutput.str(), "   A B C D\n1: 3 3 3 3\n2: 3 3 3 3\n3: 3 3 3 3\n4: 3 3 3 3");
+}
+
+TEST(StandardBoardRenderer, boardFullOf4)
+{
+	std::ostringstream capturedOutput;
+	int board[4][4]
+		= { {4,4,4,4},
+			{4,4,4,4},
+			{4,4,4,4},
+			{4,4,4,4}
+	};
+	StandardBoardRenderer renderer(capturedOutput);
+	renderer.renderBoard(board);
+	EXPECT_EQ(capturedOutput.str(), "   A B C D\n1: 4 4 4 4\n2: 4 4 4 4\n3: 4 4 4 4\n4: 4 4 4 4");
+}
+
+TEST(StandardBoardRenderer, boardFullOf5)
+{
+	std::ostringstream capturedOutput;
+	int board[4][4]
+		= { {5,5,5,5},
+			{5,5,5,5},
+			{5,5,5,5},
+			{5,5,5,5}
+	};
+	StandardBoardRenderer renderer(capturedOutput);
+	renderer.renderBoard(board);
+	EXPECT_EQ(capturedOutput.str(), "   A B C D\n1: 5 5 5 5\n2: 5 5 5 5\n3: 5 5 5 5\n4: 5 5 5 5");
+}
