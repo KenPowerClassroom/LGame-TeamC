@@ -7,13 +7,11 @@ StandardBoardRenderer::StandardBoardRenderer(std::ostream& output)
 
 void StandardBoardRenderer::renderBoard(int boardArray[4][4])
 {
-	std::string displayString;
-
-	m_output << "   A B C D";
-	for (int i = 0; i < 4; i++)
+	m_output << "   A B C D"; // first row 
+	for (int i = 0; i < 4; i++) //each row
 	{
-		m_output << "\n" << std::to_string(i+1) << ":";
-		for (int j = 0; j < 4; j++)
+		m_output << "\n" << std::to_string(i+1) << ":"; //user displayed row index starting at 1
+		for (int j = 0; j < 4; j++) //each cell
 		{
 			m_output << " ";
 			if (boardArray[i][j] > 0 && boardArray[i][j] < 5)
