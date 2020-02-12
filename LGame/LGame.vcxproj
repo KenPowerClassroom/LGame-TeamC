@@ -152,6 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Board.cpp" />
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="LGame.cpp" />
     <ClCompile Include="StandardBoardRenderer.cpp" />
     <ClCompile Include="StandardPlayer.cpp" />
@@ -164,6 +165,7 @@
   <ItemGroup>
     <ClInclude Include="Board.h" />
     <ClInclude Include="BoardRenderer.h" />
+    <ClInclude Include="Game.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="StandardPlayer.h" />
     <ClInclude Include="StandardBoardRenderer.h" />

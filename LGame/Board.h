@@ -17,6 +17,8 @@ class Board
 {
 public:
 	Board(BoardRenderer& t_boardRenderer);
+	void render();
 private:
+
 	BoardRenderer& m_boardRenderer;
 };
