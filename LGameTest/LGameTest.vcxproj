@@ -43,6 +43,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="StandardBoardRenderer.unittest.cpp" />
+    <ClCompile Include="StandardPlayer.unittest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

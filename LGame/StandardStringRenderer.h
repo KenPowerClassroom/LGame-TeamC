@@ -1,8 +1,9 @@
 #pragma once
 
 #include <iostream>
+#include "StringRenderer.h"
 
-class StandardStringRenderer
+class StandardStringRenderer : public StringRenderer
 {
 public:
 	StandardStringRenderer(std::ostream& m_output);
