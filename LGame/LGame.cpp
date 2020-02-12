@@ -3,17 +3,26 @@
 
 #include <iostream>
 #include "StandardBoardRenderer.h"
+#include "StandardPlayer.h"
+#include "StandardStringRenderer.h"
 
 int main()
 {
+	StandardStringRenderer textRenderer(std::cout);
+	StandardPlayer player(&textRenderer, std::cin);
+	StandardBoardRenderer renderer(&textRenderer);
+
 	int board[4][4]
 		= { {3,1,1,0},
 			{0,2,1,0},
 			{0,2,1,0},
 			{0,2,2,4}
 	};
-	StandardBoardRenderer renderer(std::cout);
+
+
 	renderer.renderBoard(board);
+	player.indicationForNetrualPiece();
+	system("PAUSE");
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

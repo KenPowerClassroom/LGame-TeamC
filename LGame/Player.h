@@ -6,5 +6,5 @@ public:
 	virtual void playTurn() = 0;
 
 protected:
-	virtual void playerNetural() = 0;
+	virtual void indicationForNetrualPiece() = 0;
 };

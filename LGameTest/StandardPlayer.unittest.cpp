@@ -7,11 +7,12 @@ TEST(StandardPlayer, firstTest) {
   EXPECT_TRUE(true);
 }
 
-TEST(StandardBoardRenderer, ShowYouCanMoveNeturalPiece)
+TEST(StandardPlayer, ShowYouCanMoveNeturalPiece)
 {
 	std::ostringstream capturedOutput;
-	std::istream& input();
+	std::istringstream input;
 	StandardStringRenderer textRenderer(capturedOutput);
-	StandardPlayer player(textRenderer, input);
-	EXPECT_EQ(capturedOutput.str(), "YOU CAN MOVE YOUR NETRUAL PIECE NOW");
+	StandardPlayer player(&textRenderer, input);
+	player.indicationForNetrualPiece();
+	EXPECT_EQ(capturedOutput.str(), "YOU CAN MOVE YOUR NETRUAL PIECE NOW\nWHICH NETRUAL PIECE DO YOU WANT TO MOVE (3 OR 4)\n");
 }

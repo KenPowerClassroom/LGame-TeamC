@@ -84,7 +84,7 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>StandardBoardRenderer.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>StandardBoardRenderer.obj;StandardPlayer.obj;StandardStringRenderer.obj;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>../LGame\x64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
