@@ -21,6 +21,7 @@ int main()
 
 
 	renderer.renderBoard(board);
+	player.playerLPiece();
 	player.indicationForNetrualPiece();
 	system("PAUSE");
 }

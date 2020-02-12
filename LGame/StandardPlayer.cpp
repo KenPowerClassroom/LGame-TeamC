@@ -24,7 +24,6 @@ void StandardPlayer::indicationForNetrualPiece()
 
 void StandardPlayer::playerLPiece()
 {
-	std::string playerInput;
 	if (m_turnOrder == 1)
 	{
 		m_turnOrder = 2;
@@ -34,5 +33,4 @@ void StandardPlayer::playerLPiece()
 		m_turnOrder = 1;
 	}
 	m_stringRenderer->printString("PLAYER " + std::to_string(m_turnOrder) + ", YOU CAN MOVE YOUR L PIECE NOW");
-	m_input >> playerInput;
 }
