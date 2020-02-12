@@ -23,6 +23,6 @@ TEST(StandardPlayer, ShowYouCanMoveTheLPiece)
 	std::istringstream input;
 	StandardStringRenderer textRenderer(capturedOutput);
 	StandardPlayer player(&textRenderer, input);
-	player.playerLPiece();
+	player.indicationForLPiece();
 	EXPECT_EQ(capturedOutput.str(), "PLAYER 1, YOU CAN MOVE YOUR L PIECE NOW\n");
 }

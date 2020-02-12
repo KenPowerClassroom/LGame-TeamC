@@ -3,13 +3,15 @@
 #include "Player.h"
 #include <string>
 
-class StandardPlayer : Player
+class StandardPlayer : public Player
 {
 public:
 	StandardPlayer(StringRenderer* t_stringRenderer, std::istream& t_input);
-	void playTurn();
+	void startTurn();
 	void indicationForNetrualPiece();
-	void playerLPiece();
+	void indicationForLPiece();
+	void endTurn();
+
 private:
 	StringRenderer* m_stringRenderer;
 	std::istream& m_input;

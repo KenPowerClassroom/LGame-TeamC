@@ -5,25 +5,17 @@
 #include "StandardBoardRenderer.h"
 #include "StandardPlayer.h"
 #include "StandardStringRenderer.h"
+#include "Game.h"
 
 int main()
 {
 	StandardStringRenderer textRenderer(std::cout);
-	StandardPlayer player(&textRenderer, std::cin);
 	StandardBoardRenderer renderer(&textRenderer);
-
-	int board[4][4]
-		= { {3,1,1,0},
-			{0,2,1,0},
-			{0,2,1,0},
-			{0,2,2,4}
-	};
-
-
-	renderer.renderBoard(board);
-	player.playerLPiece();
-	player.indicationForNetrualPiece();
-	system("PAUSE");
+	Player* playerA = new StandardPlayer(&textRenderer, std::cin);
+	Player* playerB = new StandardPlayer(&textRenderer, std::cin);
+	Board* board = new Board(renderer);
+	Game game(playerA, playerB, board);
+	game.run();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

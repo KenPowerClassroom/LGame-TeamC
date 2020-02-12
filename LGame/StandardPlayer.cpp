@@ -8,10 +8,11 @@ StandardPlayer::StandardPlayer(StringRenderer* t_stringRenderer, std::istream& t
 
 }
 
-void StandardPlayer::playTurn()
+void StandardPlayer::startTurn()
 {
-	playerLPiece();
+	indicationForLPiece();
 	indicationForNetrualPiece();
+	endTurn();
 }
 
 void StandardPlayer::indicationForNetrualPiece()
@@ -19,10 +20,9 @@ void StandardPlayer::indicationForNetrualPiece()
 	std::string playerInput;
 	m_stringRenderer->printString("YOU CAN MOVE YOUR NETRUAL PIECE NOW");
 	m_stringRenderer->printString("WHICH NETRUAL PIECE DO YOU WANT TO MOVE (3 OR 4)");
-	m_input >> playerInput;
 }
 
-void StandardPlayer::playerLPiece()
+void StandardPlayer::indicationForLPiece()
 {
 	if (m_turnOrder == 1)
 	{
@@ -33,4 +33,10 @@ void StandardPlayer::playerLPiece()
 		m_turnOrder = 1;
 	}
 	m_stringRenderer->printString("PLAYER " + std::to_string(m_turnOrder) + ", YOU CAN MOVE YOUR L PIECE NOW");
+}
+
+void StandardPlayer::endTurn()
+{
+	system("PAUSE");
+	system("CLS");
 }

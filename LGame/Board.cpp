@@ -7,5 +7,5 @@ Board::Board(BoardRenderer& t_boardRenderer)
 
 void Board::render()
 {
-	m_boardRenderer.renderBoard();
+	m_boardRenderer.renderBoard(m_board);
 }
