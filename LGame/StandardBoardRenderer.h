@@ -2,14 +2,16 @@
 #include <iostream>
 #include <string>
 #include "BoardRenderer.h"
+#include "StringRenderer.h"
+#include <string>
 
 class StandardBoardRenderer : public BoardRenderer
 {
 public:
-	StandardBoardRenderer(std::ostream& output);
+	StandardBoardRenderer(StringRenderer* t_stringRenderer);
 	virtual void renderBoard(int boardArray[4][4]) override;
 
 private:
-	std::ostream& m_output;
+	StringRenderer* m_stringRenderer;
 };
 

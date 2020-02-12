@@ -1,6 +1,6 @@
 #include "StandardPlayer.h"
 
-StandardPlayer::StandardPlayer(StringRenderer * t_stringRenderer, std::istream& t_input) :
+StandardPlayer::StandardPlayer(StringRenderer* t_stringRenderer, std::istream& t_input) :
 	m_stringRenderer(t_stringRenderer),
 	m_input(t_input),
 	m_turnOrder(2)
@@ -10,11 +10,11 @@ StandardPlayer::StandardPlayer(StringRenderer * t_stringRenderer, std::istream& 
 
 void StandardPlayer::playTurn()
 {
-	playerNetural();
 	playerLPiece();
+	indicationForNetrualPiece();
 }
 
-void StandardPlayer::playerNetural()
+void StandardPlayer::indicationForNetrualPiece()
 {
 	std::string playerInput;
 	m_stringRenderer->printString("YOU CAN MOVE YOUR NETRUAL PIECE NOW");

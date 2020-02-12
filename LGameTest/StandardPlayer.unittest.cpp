@@ -13,7 +13,7 @@ TEST(StandardPlayer, ShowYouCanMoveNeturalPiece)
 	std::istringstream input;
 	StandardStringRenderer textRenderer(capturedOutput);
 	StandardPlayer player(&textRenderer, input);
-	player.playerNetural();
+	player.indicationForNetrualPiece();
 	EXPECT_EQ(capturedOutput.str(), "YOU CAN MOVE YOUR NETRUAL PIECE NOW\nWHICH NETRUAL PIECE DO YOU WANT TO MOVE (3 OR 4)\n");
 }
 

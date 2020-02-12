@@ -6,13 +6,12 @@
 class StandardPlayer : Player
 {
 public:
-	StandardPlayer(StringRenderer * t_stringRenderer, std::istream& t_input);
+	StandardPlayer(StringRenderer* t_stringRenderer, std::istream& t_input);
 	void playTurn();
-	void playerNetural();
+	void indicationForNetrualPiece();
 	void playerLPiece();
-
 private:
-	StringRenderer * m_stringRenderer;
+	StringRenderer* m_stringRenderer;
 	std::istream& m_input;
 	int m_turnOrder;
 };
