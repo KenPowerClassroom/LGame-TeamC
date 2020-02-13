@@ -11,10 +11,14 @@ int main()
 {
 	StandardStringRenderer textRenderer(std::cout);
 	StandardBoardRenderer renderer(&textRenderer);
-	Player* playerA = new StandardPlayer(&textRenderer, std::cin);
-	Player* playerB = new StandardPlayer(&textRenderer, std::cin);
-	Board* board = new Board(renderer);
-	Game game(playerA, playerB, board);
+	StandardPlayer playerA(&textRenderer, std::cin);
+	StandardPlayer playerB(&textRenderer, std::cin);
+	BoardRenderer* pRenderer = &renderer;
+	Board board(pRenderer);
+	Player* pA = &playerA;
+	Player* pB = &playerB;
+
+	Game game(pA, pB, &board);
 	game.run();
 }
 
