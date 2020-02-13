@@ -153,7 +153,11 @@
   <ItemGroup>
     <ClCompile Include="Board.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Input.cpp" />
     <ClCompile Include="LGame.cpp" />
+    <ClCompile Include="LPieceMovement.cpp" />
+    <ClCompile Include="Piece.cpp" />
+    <ClCompile Include="PieceMovement.cpp" />
     <ClCompile Include="StandardBoardRenderer.cpp" />
     <ClCompile Include="StandardPlayer.cpp" />
     <ClCompile Include="StandardStringRenderer.cpp" />
@@ -166,6 +170,11 @@
     <ClInclude Include="Board.h" />
     <ClInclude Include="BoardRenderer.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Input.h" />
+    <ClInclude Include="InputInterface.h" />
+    <ClInclude Include="LPieceMovement.h" />
+    <ClInclude Include="Piece.h" />
+    <ClInclude Include="PieceMovement.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="StandardPlayer.h" />
     <ClInclude Include="StandardBoardRenderer.h" />
