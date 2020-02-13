@@ -1,9 +1,9 @@
 #include "StandardPlayer.h"
 
-StandardPlayer::StandardPlayer(StringRenderer* t_stringRenderer, std::istream& t_input) :
+StandardPlayer::StandardPlayer(StringRenderer* t_stringRenderer, std::istream& t_input, int t_turnOrder) :
 	m_stringRenderer(t_stringRenderer),
 	m_input(t_input),
-	m_turnOrder(2)
+	m_turnOrder(t_turnOrder)
 {
 
 }
@@ -24,14 +24,6 @@ void StandardPlayer::indicationForNetrualPiece()
 
 void StandardPlayer::indicationForLPiece()
 {
-	if (m_turnOrder == 1)
-	{
-		m_turnOrder = 2;
-	}
-	else if (m_turnOrder == 2)
-	{
-		m_turnOrder = 1;
-	}
 	m_stringRenderer->printString("PLAYER " + std::to_string(m_turnOrder) + ", YOU CAN MOVE YOUR L PIECE NOW");
 }
 

@@ -11,8 +11,8 @@ int main()
 {
 	StandardStringRenderer textRenderer(std::cout);
 	StandardBoardRenderer renderer(&textRenderer);
-	StandardPlayer playerA(&textRenderer, std::cin);
-	StandardPlayer playerB(&textRenderer, std::cin);
+	StandardPlayer playerA(&textRenderer, std::cin, 1);
+	StandardPlayer playerB(&textRenderer, std::cin, 2);
 	BoardRenderer* pRenderer = &renderer;
 	Board board(pRenderer);
 	Player* pA = &playerA;
