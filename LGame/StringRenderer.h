@@ -5,5 +5,5 @@
 class StringRenderer
 {
 public:
-	virtual void printString(std::string t_string) = 0;
+	virtual void printString(std::string t_string) const = 0;
 };

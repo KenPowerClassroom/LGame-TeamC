@@ -13,7 +13,7 @@ Game::~Game()
 
 void Game::run()
 {
-	bool gameOver = false;
+	bool gameOver = false; // False
 	m_board->render();
 	while (!gameOver)
 	{

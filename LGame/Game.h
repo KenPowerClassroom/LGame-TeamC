@@ -8,7 +8,6 @@ class Game
 public:
 	Game(Player* playerA, Player* playerB, Board* board);
 	~Game();
-
 	void run();
 private:
 

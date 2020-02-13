@@ -17,7 +17,6 @@ int main()
 	Board board(pRenderer);
 	Player* pA = &playerA;
 	Player* pB = &playerB;
-
 	Game game(pA, pB, &board);
 	game.run();
 }
