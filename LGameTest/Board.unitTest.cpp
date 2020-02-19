@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "gtest/gtest.h"
 #include "../LGame/Board.h"
+#include "CustomPieceMovement.h"
 
 
 TEST(Board, equalityTest) {
@@ -95,3 +96,23 @@ TEST(Board, inequalityTest2) {
 	Board b2(nullptr, data2);
 	ASSERT_FALSE(b1 == b2);
 }
+
+TEST(Board, emptyMovement)
+{
+	std::vector<CellMovement> movements;
+	CustomPieceMovement pieceMovement(movements);
+
+	int data[4][4]
+		= { {0,0,0,0},
+			{0,0,0,0},
+			{0,0,0,0},
+			{0,0,0,0}
+	};
+
+	Board b1(nullptr, data);
+	Board b2(nullptr, data);
+	b1.makeMove(pieceMovement);
+	ASSERT_TRUE(b1 == b2);
+}
+
+
