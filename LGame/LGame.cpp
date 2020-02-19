@@ -4,6 +4,7 @@
 #include <iostream>
 #include "StandardBoardRenderer.h"
 #include "StandardPlayer.h"
+#include "StandardInput.h"
 #include "StandardStringRenderer.h"
 #include "Game.h"
 
@@ -11,10 +12,11 @@ int main()
 {
 	StandardStringRenderer textRenderer(std::cout);
 	StandardBoardRenderer renderer(&textRenderer);
-	StandardPlayer playerA(&textRenderer, std::cin, 1);
-	StandardPlayer playerB(&textRenderer, std::cin, 2);
 	BoardRenderer* pRenderer = &renderer;
 	Board board(pRenderer);
+	StandardInput input(std::cin, std::cout);
+	StandardPlayer playerA(&textRenderer, &input, 1);
+	StandardPlayer playerB(&textRenderer, &input, 2);
 	Player* pA = &playerA;
 	Player* pB = &playerB;
 	Game game(pA, pB, &board);

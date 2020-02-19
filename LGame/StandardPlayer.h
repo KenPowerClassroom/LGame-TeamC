@@ -1,12 +1,13 @@
 #pragma once
 #include "StringRenderer.h"
 #include "Player.h"
+#include "Input.h"
 #include <string>
 
 class StandardPlayer : public Player
 {
 public:
-	StandardPlayer(StringRenderer* t_stringRenderer, std::istream& t_input, int t_turnOrder);
+	StandardPlayer(StringRenderer* t_stringRenderer, InputInterface* t_inputRenderer, int t_turnOrder);
 	void startTurn();
 	void indicationForNetrualPiece();
 	void indicationForLPiece();
@@ -14,6 +15,6 @@ public:
 
 private:
 	StringRenderer* m_stringRenderer;
-	std::istream& m_input;
+	InputInterface* m_inputRenderer;
 	int m_turnOrder;
 };
