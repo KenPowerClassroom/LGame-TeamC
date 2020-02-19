@@ -6,6 +6,11 @@ Board::Board(BoardRenderer* renderer) :
 
 }
 
+void Board::makeMove(PieceMovement const& movement)
+{
+
+}
+
 void Board::render()
 {
 	m_renderer->renderBoard(m_data);

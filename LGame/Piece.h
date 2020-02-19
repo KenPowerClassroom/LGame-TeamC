@@ -1,3 +1,3 @@
 #pragma once
 
-enum class Piece {LPiece, NeutralPiece};
+enum class Piece {L_A, L_B, NEUTRAL_A, NEUTRAL_B};

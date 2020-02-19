@@ -161,8 +161,8 @@
   <ItemGroup>
     <ClInclude Include="Board.h" />
     <ClInclude Include="BoardRenderer.h" />
-    <ClInclude Include="CellMovement.h" />
     <ClInclude Include="Piece.h" />
+    <ClInclude Include="PieceMovement.h" />
     <ClInclude Include="StandardBoardRenderer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
