@@ -3,7 +3,15 @@
 #include "../LGame/Board.h"
 
 
-TEST(TestCaseName, TestName) {
-  EXPECT_EQ(1, 1);
-  EXPECT_TRUE(true);
+TEST(Board, equalityTest) {
+	int data[4][4]
+		= { {0,0,0,0},
+			{0,0,0,0},
+			{0,0,0,0},
+			{0,0,0,0}
+	};
+
+	Board b1(nullptr, data);
+	Board b2(nullptr, data);
+	ASSERT_TRUE(b1 == b2);
 }
