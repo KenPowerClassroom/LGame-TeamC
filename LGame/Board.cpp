@@ -30,10 +30,29 @@ Board::Board(BoardRenderer* renderer, int data[4][4]) :
 void Board::makeMove(PieceMovement const& movement)
 {
 	std::vector<CellMovement> cellMovements = movement.getCellMovement();
-	for (CellMovement const& cell : cellMovements)
+	if (cellMovements.size() > 0)
 	{
-		m_data[cell.newRow][cell.newColomn] = pieceReference[cell.piece];
+		//deleting previous spot
+		int pieceIndex = pieceReference[cellMovements.at(0).piece];
+		for (int i = 0; i < 4; i++)
+		{
+			for (int j = 0; j < 4; j++)
+			{
+				if (m_data[i][j] == pieceIndex)
+				{
+					m_data[i][j] = 0;
+				}
+			}
+		}
+
+		//making the movements
+		for (CellMovement const& cell : cellMovements)
+		{
+			m_data[cell.newColomn][cell.newRow] = pieceReference[cell.piece];
+		}
 	}
+
+ 
 
 }
 

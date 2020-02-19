@@ -144,3 +144,94 @@ TEST(Board, onPieceMovement) {
 	ASSERT_TRUE(initialBoard == finalBoard);
 }
 
+TEST(Board, twoPieceMovement) {
+
+	std::vector<CellMovement> movements;
+	movements.push_back(CellMovement(1, 1, Piece::L_A));
+	movements.push_back(CellMovement(2, 2, Piece::NEUTRAL_A));
+	CustomPieceMovement pieceMovement(movements);
+
+	int initial[4][4]
+		= { {0,0,0,0},
+			{0,0,0,0},
+			{0,0,0,0},
+			{0,0,0,0}
+	};
+
+	int final[4][4]
+		= { {0,0,0,0},
+			{0,1,0,0},
+			{0,0,3,0},
+			{0,0,0,0}
+	};
+
+	Board initialBoard(nullptr, initial);
+	Board finalBoard(nullptr, final);
+
+	initialBoard.makeMove(pieceMovement);
+
+	ASSERT_TRUE(initialBoard == finalBoard);
+}
+
+TEST(Board, LPieceNewMovement) {
+
+	std::vector<CellMovement> movements;
+	movements.push_back(CellMovement(1, 1, Piece::L_B));
+	movements.push_back(CellMovement(1, 2, Piece::L_B));
+	movements.push_back(CellMovement(1, 3, Piece::L_B));
+	movements.push_back(CellMovement(2, 3, Piece::L_B));
+	CustomPieceMovement pieceMovement(movements);
+
+	int initial[4][4]
+		= { {0,0,0,0},
+			{0,0,0,0},
+			{0,0,0,0},
+			{0,0,0,0}
+	};
+
+	int final[4][4]
+		= { {0,0,0,0},
+			{0,2,0,0},
+			{0,2,0,0},
+			{0,2,2,0}
+	};
+
+	Board initialBoard(nullptr, initial);
+	Board finalBoard(nullptr, final);
+
+	initialBoard.makeMove(pieceMovement);
+
+	ASSERT_TRUE(initialBoard == finalBoard);
+}
+
+TEST(Board, LPieceMovementShouldErasePrevious) {
+
+	std::vector<CellMovement> movements;
+	movements.push_back(CellMovement(1, 1, Piece::L_B));
+	movements.push_back(CellMovement(1, 2, Piece::L_B));
+	movements.push_back(CellMovement(1, 3, Piece::L_B));
+	movements.push_back(CellMovement(2, 3, Piece::L_B));
+	CustomPieceMovement pieceMovement(movements);
+
+	int initial[4][4]
+		= { {0,2,2,0},
+			{0,0,2,0},
+			{0,0,2,0},
+			{0,0,0,0}
+	};
+
+	int final[4][4]
+		= { {0,0,0,0},
+			{0,2,0,0},
+			{0,2,0,0},
+			{0,2,2,0}
+	};
+
+	Board initialBoard(nullptr, initial);
+	Board finalBoard(nullptr, final);
+
+	initialBoard.makeMove(pieceMovement);
+
+	ASSERT_TRUE(initialBoard == finalBoard);
+}
+
