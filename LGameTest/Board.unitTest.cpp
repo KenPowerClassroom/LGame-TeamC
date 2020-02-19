@@ -116,3 +116,31 @@ TEST(Board, emptyMovement)
 }
 
 
+TEST(Board, onPieceMovement) {
+
+	std::vector<CellMovement> movements;
+	movements.push_back(CellMovement(1, 1, Piece::L_A));
+	CustomPieceMovement pieceMovement(movements);
+
+	int initial[4][4]
+		= { {0,0,0,0},
+			{0,0,0,0},
+			{0,0,0,0},
+			{0,0,0,0}
+	};
+
+	int final[4][4]
+		= { {0,0,0,0},
+			{0,1,0,0},
+			{0,0,0,0},
+			{0,0,0,0}
+	};
+
+	Board initialBoard(nullptr, initial);
+	Board finalBoard(nullptr, final);
+
+	initialBoard.makeMove(pieceMovement);
+
+	ASSERT_TRUE(initialBoard == finalBoard);
+}
+

@@ -17,6 +17,6 @@ struct CellMovement
 class PieceMovement
 {
 public: 
-	virtual std::vector<CellMovement> getCellMovement() = 0;
+	virtual std::vector<CellMovement> getCellMovement() const = 0;
 };
 

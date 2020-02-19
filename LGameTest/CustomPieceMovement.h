@@ -10,7 +10,7 @@ public:
 
 	}
 
-	virtual std::vector<CellMovement> getCellMovement()
+	virtual std::vector<CellMovement> getCellMovement() const
 	{
 		return m_movements;
 	}
