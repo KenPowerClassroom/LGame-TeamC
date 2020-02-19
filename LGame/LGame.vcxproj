@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Board.cpp" />
     <ClCompile Include="LGame.cpp" />
     <ClCompile Include="StandardBoardRenderer.cpp" />
   </ItemGroup>
@@ -158,6 +159,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Board.h" />
     <ClInclude Include="BoardRenderer.h" />
     <ClInclude Include="StandardBoardRenderer.h" />
   </ItemGroup>

@@ -2,18 +2,14 @@
 //
 
 #include <iostream>
+#include "Board.h"
 #include "StandardBoardRenderer.h"
 
 int main()
 {
-	int board[4][4]
-		= { {3,1,1,0},
-			{0,2,1,0},
-			{0,2,1,0},
-			{0,2,2,4}
-	};
 	StandardBoardRenderer renderer(std::cout);
-	renderer.renderBoard(board);
+	Board board(&renderer);
+	board.render();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
