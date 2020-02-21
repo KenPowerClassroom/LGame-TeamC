@@ -9,8 +9,10 @@ class StandardPlayer : public Player
 public:
 	StandardPlayer(StringRenderer* t_stringRenderer, InputInterface* t_inputRenderer, int t_turnOrder);
 	void startTurn();
-	void indicationForNetrualPiece();
+	void indicationForMovingNetrualPiece();
+	void indicationForSelectingNetrualPiece();
 	void indicationForLPiece();
+	void inputForNeutralPiece();
 	void endTurn();
 
 private:
