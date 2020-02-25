@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+#include "Board.h"
 #include "StandardBoardRenderer.h"
 #include "StandardPlayer.h"
 #include "StandardInput.h"
