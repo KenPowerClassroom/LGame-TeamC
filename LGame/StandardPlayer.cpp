@@ -3,17 +3,16 @@
 StandardPlayer::StandardPlayer(StringRenderer* t_stringRenderer, InputInterface* t_inputRenderer,  int t_turnOrder) :
 	m_stringRenderer(t_stringRenderer),
 	m_inputRenderer(t_inputRenderer),
-	m_turnOrder(2)
+	m_turnOrder(t_turnOrder)
 {
 	m_Piece = Piece::L_A;
 	m_Input = Input::ROW;
 }
 
-void StandardPlayer::startTurn()
+void StandardPlayer::playTurn(Board* board)
 {
 	indicationForLPiece();
-	indicationForSelectingLPiece();
-	inputForLPiece();
+	lPieceMovement(board);
 	indicationForNetrualPiece();
 	endTurn();
 }
@@ -32,48 +31,69 @@ void StandardPlayer::indicationForSelectingLPiece()
 
 void StandardPlayer::indicationForLPiece()
 {
-	if (m_turnOrder == 1)
-	{
-		m_turnOrder = 2;
-	}
-	else if (m_turnOrder == 2)
-	{
-		m_turnOrder = 1;
-	}
 	m_stringRenderer->printString("PLAYER " + std::to_string(m_turnOrder) + ", YOU CAN MOVE YOUR L PIECE NOW");
 }
 
-void StandardPlayer::inputForLPiece()
+void StandardPlayer::lPieceMovement(Board* board)
 {
-	CellMovement m_lPieceMovement;
+	Piece piece;
+	if (m_turnOrder == 1)
+	{
+		piece = Piece::L_A;
+	}
+	else
+	{
+		piece = Piece::L_B;
+	}
+
+	//contructing the LPieceMeovement
+	LPieceMovement movement;
+	for (unsigned int cellTurn = 0; cellTurn < 4; cellTurn++)
+	{
+		m_stringRenderer->printString("L piece Movement : " + std::to_string(cellTurn + 1));
+		movement.addCellMovement(getCellMovementInput(piece));
+	}
+
+	//Making the movement 
+	board->makeMove(movement);
+}
+
+CellMovement StandardPlayer::getCellMovementInput(Piece piece)
+{
+	m_Input = Input::ROW;
+	CellMovement cellMovement;
+	cellMovement.piece = piece;
+
+	indicationForSelectingLPiece();
+
 	while (true)
 	{
 		char firstInput = m_inputRenderer->getInput();
 		if (m_Input == Input::ROW)
 		{
-			if (firstInput == 'A')
+			if (firstInput == '1')
 			{
-				m_lPieceMovement.newRow = 'A';
+				cellMovement.newRow = 0;
 				m_Input = Input::COL;
 			}
-			else if (firstInput == 'B')
+			else if (firstInput == '2')
 			{
-				m_lPieceMovement.newRow = 'B';
+				cellMovement.newRow = 1;
 				m_Input = Input::COL;
 			}
-			else if (firstInput == 'C')
+			else if (firstInput == '3')
 			{
-				m_lPieceMovement.newRow = 'C';
+				cellMovement.newRow = 2;
 				m_Input = Input::COL;
 			}
-			else if (firstInput == 'D')
+			else if (firstInput == '4')
 			{
-				m_lPieceMovement.newRow = 'D';
+				cellMovement.newRow = 3;
 				m_Input = Input::COL;
 			}
 			else
 			{
-				m_stringRenderer->printString("YOU HAVE NOT ENTERED A VALID LETTER. PLEASE TRY AGAIN.");
+				m_stringRenderer->printString("YOU HAVE NOT ENTERED A VALID NUMBER. PLEASE TRY AGAIN.");
 			}
 		}
 
@@ -81,33 +101,34 @@ void StandardPlayer::inputForLPiece()
 		{
 			m_stringRenderer->printString("WHERE DO YOU WANT TO MOVE YOUR L PIECE. PLEASE INDICATE A COLUMN.");
 			char secondImput = m_inputRenderer->getInput();
-			if (secondImput == '1')
+			if (secondImput == 'A')
 			{
-				m_lPieceMovement.newCol = '1';
+				cellMovement.newColomn = 0;
 				break;
 			}
-			else if (secondImput == '2')
+			else if (secondImput == 'B')
 			{
-				m_lPieceMovement.newCol = 'B';
+				cellMovement.newColomn = 1;
 				break;
 			}
-			else if (secondImput == '3')
+			else if (secondImput == 'C')
 			{
-				m_lPieceMovement.newCol = 'C';
+				cellMovement.newColomn = 2;
 				break;
 			}
-			else if (secondImput == '4')
+			else if (secondImput == 'D')
 			{
-				m_lPieceMovement.newCol = 'D';
+				cellMovement.newColomn = 3;
 				break;
 			}
 			else
 			{
-				m_stringRenderer->printString("YOU HAVE NOT ENTERED A VALID NUMBER. PLEASE TRY AGAIN.");
+				m_stringRenderer->printString("YOU HAVE NOT ENTERED A VALID LETTER. PLEASE TRY AGAIN.");
 			}
 		}
 		
 	}
+	return cellMovement;
 }
 
 void StandardPlayer::endTurn()

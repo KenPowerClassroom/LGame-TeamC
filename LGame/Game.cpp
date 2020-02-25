@@ -17,9 +17,9 @@ void Game::run()
 	m_board->render();
 	while (!gameOver)
 	{
-		m_playerA->startTurn();
+		m_playerA->playTurn(m_board);
 		m_board->render();
-		m_playerB->startTurn();
+		m_playerB->playTurn(m_board);
 		m_board->render();
 	}
 }

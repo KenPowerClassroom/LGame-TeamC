@@ -12,11 +12,12 @@ class StandardPlayer : public Player
 {
 public:
 	StandardPlayer(StringRenderer* t_stringRenderer, InputInterface* t_inputRenderer, int t_turnOrder);
-	void startTurn();
+	void playTurn(Board* board);
 	void indicationForNetrualPiece();
 	void indicationForSelectingLPiece();
 	void indicationForLPiece();
-	void inputForLPiece();
+	void lPieceMovement(Board* board);
+	CellMovement getCellMovementInput(Piece piece);
 	void endTurn();
 
 private:

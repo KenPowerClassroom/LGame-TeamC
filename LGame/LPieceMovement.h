@@ -3,7 +3,8 @@
 class LPieceMovement : public PieceMovement
 {
 public:
-	LPieceMovement(std::string t_str);
+	LPieceMovement();
+	void addCellMovement(CellMovement movement);
 	std::vector<CellMovement> getCellMovement() const;
 
 private:

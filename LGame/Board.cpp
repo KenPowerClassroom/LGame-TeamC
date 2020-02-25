@@ -29,6 +29,7 @@ Board::Board(BoardRenderer* renderer, int data[4][4]) :
 
 void Board::makeMove(PieceMovement const& movement)
 {
+	
 	std::vector<CellMovement> cellMovements = movement.getCellMovement();
 	if (cellMovements.size() > 0)
 	{
@@ -48,7 +49,7 @@ void Board::makeMove(PieceMovement const& movement)
 		//making the movements
 		for (CellMovement const& cell : cellMovements)
 		{
-			m_board[cell.newCol][cell.newRow] = pieceReference[cell.piece];
+			m_board[cell.newRow][cell.newColomn] = pieceReference[cell.piece];
 		}
 	}
 }

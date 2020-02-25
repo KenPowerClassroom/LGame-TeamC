@@ -1,11 +1,16 @@
 #include "LPieceMovement.h"
 
-LPieceMovement::LPieceMovement(std::string t_str)
+LPieceMovement::LPieceMovement()
 {
 
 }
 
+void LPieceMovement::addCellMovement(CellMovement movement)
+{
+	cells.push_back(movement);
+}
+
 std::vector<CellMovement> LPieceMovement::getCellMovement() const
 {
-	return std::vector<CellMovement>();
+	return cells;
 }

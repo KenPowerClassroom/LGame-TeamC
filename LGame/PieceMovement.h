@@ -6,16 +6,16 @@
 struct CellMovement
 {
 	int newRow;
-	int newCol;
+	int newColomn;
 	Piece piece;
 
 	CellMovement() :
-		newRow(0), newCol(0), piece(Piece::L_A)
+		newRow(0), newColomn(0), piece(Piece::L_A)
 	{
 	}
 
 	CellMovement(int row, int colomn, Piece pieceToMove) : 
-	newRow(row), newCol(colomn), piece(pieceToMove)
+	newRow(row), newColomn(colomn), piece(pieceToMove)
 	{}
 
 };
