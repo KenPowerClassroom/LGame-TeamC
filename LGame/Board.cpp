@@ -10,14 +10,14 @@ Board::Board(BoardRenderer* t_boardRenderer)
 }
 
 Board::Board(BoardRenderer* renderer, int data[4][4]) :
-	m_renderer(renderer)
+	m_boardRenderer(renderer)
 {
 	//array copy 
 	for (int i = 0; i < 4; i++)
 	{
 		for (int j = 0; j < 4; j++)
 		{
-			m_data[i][j] = data[i][j];
+			m_board[i][j] = data[i][j];
 		}
 	}
 
@@ -38,9 +38,9 @@ void Board::makeMove(PieceMovement const& movement)
 		{
 			for (int j = 0; j < 4; j++)
 			{
-				if (m_data[i][j] == pieceIndex)
+				if (m_board[i][j] == pieceIndex)
 				{
-					m_data[i][j] = 0;
+					m_board[i][j] = 0;
 				}
 			}
 		}
@@ -48,7 +48,7 @@ void Board::makeMove(PieceMovement const& movement)
 		//making the movements
 		for (CellMovement const& cell : cellMovements)
 		{
-			m_data[cell.newColomn][cell.newRow] = pieceReference[cell.piece];
+			m_board[cell.newCol][cell.newRow] = pieceReference[cell.piece];
 		}
 	}
 }
@@ -64,7 +64,7 @@ bool Board::operator==(Board const& rhs)
 	{
 		for (int j = 0; j < 4; j++)
 		{
-			if (m_data[i][j] != rhs.m_data[i][j])
+			if (m_board[i][j] != rhs.m_board[i][j])
 			{
 				return false;
 			}

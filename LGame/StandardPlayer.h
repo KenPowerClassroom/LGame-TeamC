@@ -5,12 +5,13 @@
 #include "LPieceMovement.h"
 #include "Piece.h"
 #include "Inputs.h"
+#include "PieceMovement.h"
 
 
 class StandardPlayer : public Player
 {
 public:
-	StandardPlayer(StringRenderer* t_stringRenderer, InputInterface* t_inputRenderer, CellMovement t_cellMovement, int t_turnOrder);
+	StandardPlayer(StringRenderer* t_stringRenderer, InputInterface* t_inputRenderer, int t_turnOrder);
 	void startTurn();
 	void indicationForNetrualPiece();
 	void indicationForSelectingLPiece();
@@ -21,7 +22,6 @@ public:
 private:
 	StringRenderer* m_stringRenderer;
 	InputInterface* m_inputRenderer;
-	CellMovement m_lPieceMovement;
 	Piece m_Piece;
 	Input m_Input;
 	int m_turnOrder;

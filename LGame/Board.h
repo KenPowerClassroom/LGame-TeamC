@@ -3,6 +3,7 @@
 #include "BoardRenderer.h"
 #include "PieceMovement.h"
 #include <map>
+#include <vector>
 
 class Board
 {

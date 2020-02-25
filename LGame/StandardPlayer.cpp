@@ -1,9 +1,8 @@
 #include "StandardPlayer.h"
 
-StandardPlayer::StandardPlayer(StringRenderer* t_stringRenderer, InputInterface* t_inputRenderer, CellMovement t_cellMovement, int t_turnOrder) :
+StandardPlayer::StandardPlayer(StringRenderer* t_stringRenderer, InputInterface* t_inputRenderer,  int t_turnOrder) :
 	m_stringRenderer(t_stringRenderer),
 	m_inputRenderer(t_inputRenderer),
-	m_lPieceMovement(t_cellMovement),
 	m_turnOrder(2)
 {
 	m_Piece = Piece::L_A;
@@ -46,7 +45,7 @@ void StandardPlayer::indicationForLPiece()
 
 void StandardPlayer::inputForLPiece()
 {
-	
+	CellMovement m_lPieceMovement;
 	while (true)
 	{
 		char firstInput = m_inputRenderer->getInput();

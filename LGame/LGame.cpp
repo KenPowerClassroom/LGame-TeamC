@@ -18,8 +18,8 @@ int main()
 	Board board(pRenderer);
 	StandardInput input(std::cout, std::cin);
 	CellMovement pieceMovement;
-	StandardPlayer playerA(&textRenderer, &input, pieceMovement, 1);
-	StandardPlayer playerB(&textRenderer, &input, pieceMovement, 2);
+	StandardPlayer playerA(&textRenderer, &input, 1);
+	StandardPlayer playerB(&textRenderer, &input, 2);
 	Player* pA = &playerA;
 	Player* pB = &playerB;
 
