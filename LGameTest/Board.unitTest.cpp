@@ -191,9 +191,9 @@ TEST(Board, LPieceNewMovement) {
 
 	int final[4][4]
 		= { {0,0,0,0},
-			{0,2,0,0},
-			{0,2,0,0},
-			{0,2,2,0}
+			{0,2,2,2},
+			{0,0,0,2},
+			{0,0,0,0}
 	};
 
 	Board initialBoard(nullptr, initial);
@@ -222,9 +222,9 @@ TEST(Board, LPieceMovementShouldErasePrevious) {
 
 	int final[4][4]
 		= { {0,0,0,0},
-			{0,2,0,0},
-			{0,2,0,0},
-			{0,2,2,0}
+			{0,2,2,2},
+			{0,0,0,2},
+			{0,0,0,0}
 	};
 
 	Board initialBoard(nullptr, initial);
