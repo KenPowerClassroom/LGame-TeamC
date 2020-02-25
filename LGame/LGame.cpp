@@ -4,17 +4,21 @@
 #include <iostream>
 #include "StandardBoardRenderer.h"
 #include "StandardPlayer.h"
+#include "StandardInput.h"
 #include "StandardStringRenderer.h"
 #include "Game.h"
+#include "LPieceMovement.h"
 
 int main()
 {
 	StandardStringRenderer textRenderer(std::cout);
 	StandardBoardRenderer renderer(&textRenderer);
-	StandardPlayer playerA(&textRenderer, std::cin);
-	StandardPlayer playerB(&textRenderer, std::cin);
 	BoardRenderer* pRenderer = &renderer;
 	Board board(pRenderer);
+	StandardInput input(std::cout, std::cin);
+	CellMovement pieceMovement;
+	StandardPlayer playerA(&textRenderer, &input, pieceMovement, 1);
+	StandardPlayer playerB(&textRenderer, &input, pieceMovement, 2);
 	Player* pA = &playerA;
 	Player* pB = &playerB;
 

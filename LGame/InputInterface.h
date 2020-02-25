@@ -3,6 +3,7 @@
 #include <string>
 class InputInterface
 {
-	virtual std::string getInput() const = 0;
+public:
+	virtual const char getInput() = 0;
 
 };

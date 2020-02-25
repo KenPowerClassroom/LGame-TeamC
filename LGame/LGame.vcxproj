@@ -23,7 +23,7 @@
     <ProjectGuid>{EB4C8590-E1A9-43B3-B672-DA2D9675FD48}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>LGame</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -42,7 +42,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -153,12 +153,11 @@
   <ItemGroup>
     <ClCompile Include="Board.cpp" />
     <ClCompile Include="Game.cpp" />
-    <ClCompile Include="Input.cpp" />
     <ClCompile Include="LGame.cpp" />
     <ClCompile Include="LPieceMovement.cpp" />
-    <ClCompile Include="Piece.cpp" />
     <ClCompile Include="PieceMovement.cpp" />
     <ClCompile Include="StandardBoardRenderer.cpp" />
+    <ClCompile Include="StandardInput.cpp" />
     <ClCompile Include="StandardPlayer.cpp" />
     <ClCompile Include="StandardStringRenderer.cpp" />
     <ClCompile Include="UserInterface.cpp" />
@@ -170,12 +169,13 @@
     <ClInclude Include="Board.h" />
     <ClInclude Include="BoardRenderer.h" />
     <ClInclude Include="Game.h" />
-    <ClInclude Include="Input.h" />
     <ClInclude Include="InputInterface.h" />
+    <ClInclude Include="Inputs.h" />
     <ClInclude Include="LPieceMovement.h" />
     <ClInclude Include="Piece.h" />
     <ClInclude Include="PieceMovement.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="StandardInput.h" />
     <ClInclude Include="StandardPlayer.h" />
     <ClInclude Include="StandardBoardRenderer.h" />
     <ClInclude Include="StandardStringRenderer.h" />

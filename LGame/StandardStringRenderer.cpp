@@ -1,6 +1,6 @@
 #include "StandardStringRenderer.h"
 
-StandardStringRenderer::StandardStringRenderer(std::ostream& t_output) 
+StandardStringRenderer::StandardStringRenderer(std::ostream& t_output)
 	: m_output(t_output)
 {
 }
