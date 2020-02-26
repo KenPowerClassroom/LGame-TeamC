@@ -235,3 +235,57 @@ TEST(Board, LPieceMovementShouldErasePrevious) {
 	ASSERT_TRUE(initialBoard == finalBoard);
 }
 
+TEST(Board, NPieceNewMovement) {
+	std::vector<CellMovement> movement;
+	movement.push_back(CellMovement(2, 2, Piece::NEUTRAL_A));
+	CustomPieceMovement pieceMovement(movement);
+
+	int initial[4][4]
+		= { {0,0,0,0},
+			{0,0,0,0},
+			{0,0,0,0},
+			{0,0,0,0}
+	};
+
+	int final[4][4]
+		= { {0,0,0,0},
+			{0,0,0,0},
+			{0,0,3,0},
+			{0,0,0,0}
+	};
+
+	Board initialBoard(nullptr, initial);
+	Board finalBoard(nullptr, final);
+
+	initialBoard.makeMove(pieceMovement);
+
+	ASSERT_TRUE(initialBoard == finalBoard);
+}
+
+TEST(Board, NPieceMovementShouldErasePrevious) {
+	std::vector<CellMovement> movement;
+	movement.push_back(CellMovement(2, 2, Piece::NEUTRAL_A));
+	CustomPieceMovement pieceMovement(movement);
+
+	int initial[4][4]
+		= { {0,0,0,0},
+			{0,3,0,0},
+			{0,0,0,0},
+			{0,0,0,0}
+	};
+
+	int final[4][4]
+		= { {0,0,0,0},
+			{0,0,0,0},
+			{0,0,3,0},
+			{0,0,0,0}
+	};
+
+	Board initialBoard(nullptr, initial);
+	Board finalBoard(nullptr, final);
+
+	initialBoard.makeMove(pieceMovement);
+
+	ASSERT_TRUE(initialBoard == finalBoard);
+}
+
