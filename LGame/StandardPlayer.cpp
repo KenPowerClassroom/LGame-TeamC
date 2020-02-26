@@ -13,17 +13,11 @@ void StandardPlayer::playTurn(Board* board)
 {
 	indicationForLPiece();
 	lPieceMovement(board);
-	indicationForNetrualPiece();
+	indicationForMovingNetrualPiece();
+	indicationForSelectingNetrualPiece();
+	inputForNeutralPiece();
 	endTurn();
 }
-
-void StandardPlayer::indicationForNetrualPiece()
-{
-	std::string playerInput;
-	m_stringRenderer->printString("YOU CAN MOVE YOUR NETRUAL PIECE NOW");
-	m_stringRenderer->printString("WHICH NETRUAL PIECE DO YOU WANT TO MOVE (3 OR 4)");
-}
-
 void StandardPlayer::indicationForSelectingLPiece()
 {
 	m_stringRenderer->printString("WHERE DO YOU WANT TO MOVE YOUR L PIECE. PLEASE INDICATE A ROW.");
@@ -32,6 +26,47 @@ void StandardPlayer::indicationForSelectingLPiece()
 void StandardPlayer::indicationForLPiece()
 {
 	m_stringRenderer->printString("PLAYER " + std::to_string(m_turnOrder) + ", YOU CAN MOVE YOUR L PIECE NOW");
+}
+
+void StandardPlayer::indicationForMovingNetrualPiece()
+{
+	m_stringRenderer->printString("YOU CAN MOVE YOUR NETRUAL PIECE NOW");
+}
+
+void StandardPlayer::indicationForSelectingNetrualPiece()
+{
+	m_stringRenderer->printString("WHICH NETRUAL PIECE DO YOU WANT TO MOVE (3 OR 4)");
+}
+
+void StandardPlayer::inputForNeutralPiece()
+{
+	while (true)
+	{
+		int input = m_inputRenderer->getInterger();
+
+		if ((input >= 3 && input <= 4) || input == 0)
+		{
+			if (input == 0)
+			{
+				m_stringRenderer->printString("YOU DID NOT SELECT A NEUTRAL PIECE");
+				break;
+			}
+			else if (input == 3)
+			{
+				m_stringRenderer->printString("YOU HAVE SELECTED THE THIRD NEUTRAL PIECE");
+				break;
+			}
+			else if (input == 4)
+			{
+				m_stringRenderer->printString("YOU HAVE SELECTED THE FOURTH NEUTRAL PIECE");
+				break;
+			}
+		}
+		else
+		{
+			m_stringRenderer->printString("YOU HAVE NOT ENTERED A VALID NUMBER. PLEASE TRY AGAIN.");
+		}
+	}
 }
 
 void StandardPlayer::lPieceMovement(Board* board)

@@ -13,9 +13,11 @@ class StandardPlayer : public Player
 public:
 	StandardPlayer(StringRenderer* t_stringRenderer, InputInterface* t_inputRenderer, int t_turnOrder);
 	void playTurn(Board* board);
-	void indicationForNetrualPiece();
 	void indicationForSelectingLPiece();
 	void indicationForLPiece();
+	void indicationForMovingNetrualPiece();
+	void indicationForSelectingNetrualPiece();
+	void inputForNeutralPiece();
 	void lPieceMovement(Board* board);
 	CellMovement getCellMovementInput(Piece piece);
 	void endTurn();
