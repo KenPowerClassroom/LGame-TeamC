@@ -46,12 +46,12 @@ void StandardPlayer::inputForNeutralPiece()
 			}
 			else if (input == 3)
 			{
-				m_stringRenderer->printString("YOU HAVE SELECTED THE " + std::to_string(input) + "NEUTRAL PIECE");
+				m_stringRenderer->printString("YOU HAVE SELECTED THE THIRD NEUTRAL PIECE");
 				break;
 			}
 			else if (input == 4)
 			{
-				m_stringRenderer->printString("YOU HAVE SELECTED THE " + std::to_string(input) + "NEUTRAL PIECE");
+				m_stringRenderer->printString("YOU HAVE SELECTED THE FOURTH NEUTRAL PIECE");
 				break;
 			}
 		}

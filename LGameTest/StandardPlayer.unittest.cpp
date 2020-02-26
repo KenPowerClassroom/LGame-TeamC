@@ -1,9 +1,9 @@
 #include "pch.h"
 #include "gtest/gtest.h"
+#include "gmock/gmock.h"
 #include "../LGame/StandardPlayer.h"
 #include "../LGame/StandardStringRenderer.h"
 #include "..//LGame/StandardInput.h"
-#include "gmock/gmock.h"
 
 using ::testing::Return;
 
@@ -62,4 +62,44 @@ TEST(StandardPlayer, InputZeroValueForNeutralPiece)
 
 	player.inputForNeutralPiece();
 	EXPECT_EQ(capturedOutput.str(), "YOU DID NOT SELECT A NEUTRAL PIECE\n");
+}
+
+TEST(StandardPlayer, InputThirdValueForNeutralPiece)
+{
+	std::ostringstream capturedOutput;
+	MockInput mockInput;
+	StandardStringRenderer textRenderer(capturedOutput);
+	StandardPlayer player(&textRenderer, &mockInput, 1);
+	EXPECT_CALL(mockInput, getInterger)
+		.WillOnce(Return(3));
+
+	player.inputForNeutralPiece();
+	EXPECT_EQ(capturedOutput.str(), "YOU HAVE SELECTED THE THIRD NEUTRAL PIECE\n");
+}
+
+TEST(StandardPlayer, InputFourthValueForNeutralPiece)
+{
+	std::ostringstream capturedOutput;
+	MockInput mockInput;
+	StandardStringRenderer textRenderer(capturedOutput);
+	StandardPlayer player(&textRenderer, &mockInput, 1);
+	EXPECT_CALL(mockInput, getInterger)
+		.WillOnce(Return(4));
+
+	player.inputForNeutralPiece();
+	EXPECT_EQ(capturedOutput.str(), "YOU HAVE SELECTED THE FOURTH NEUTRAL PIECE\n");
+}
+
+TEST(StandardPlayer, InputWrongValueForNeutralPiece)
+{
+	std::ostringstream capturedOutput;
+	MockInput mockInput;
+	StandardStringRenderer textRenderer(capturedOutput);
+	StandardPlayer player(&textRenderer, &mockInput, 1);
+	EXPECT_CALL(mockInput, getInterger)
+		.WillOnce(Return(55))
+		.WillOnce(Return(0));
+
+	player.inputForNeutralPiece();
+	EXPECT_EQ(capturedOutput.str(), "YOU HAVE NOT ENTERED A VALID NUMBER. PLEASE TRY AGAIN.\nYOU DID NOT SELECT A NEUTRAL PIECE\n");
 }
