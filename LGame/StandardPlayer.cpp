@@ -7,6 +7,7 @@ StandardPlayer::StandardPlayer(StringRenderer* t_stringRenderer, InputInterface*
 {
 	m_Piece = Piece::L_A;
 	m_Input = Input::ROW;
+	m_selectedNeutral = 0;
 }
 
 void StandardPlayer::playTurn(Board* board)
@@ -16,6 +17,7 @@ void StandardPlayer::playTurn(Board* board)
 	indicationForMovingNetrualPiece();
 	indicationForSelectingNetrualPiece();
 	inputForNeutralPiece();
+	nPieceMovement(board);
 	endTurn();
 }
 void StandardPlayer::indicationForSelectingLPiece()
@@ -43,6 +45,7 @@ void StandardPlayer::inputForNeutralPiece()
 	while (true)
 	{
 		int input = m_inputRenderer->getInterger();
+		m_selectedNeutral = input;
 
 		if ((input >= 3 && input <= 4) || input == 0)
 		{
@@ -90,6 +93,27 @@ void StandardPlayer::lPieceMovement(Board* board)
 	}
 
 	//Making the movement 
+	board->makeMove(movement);
+}
+
+void StandardPlayer::nPieceMovement(Board* board)
+{
+	Piece piece;
+	if (m_selectedNeutral == 3)
+	{
+		piece = Piece::NEUTRAL_A;
+	}
+	else if (m_selectedNeutral == 4)
+	{
+		piece = Piece::NEUTRAL_B;
+	}
+
+	// Constructing the NpPieceMovement
+	NPieceMovement movement;
+	m_stringRenderer->printString("N piece Movement : " + std::to_string(m_selectedNeutral));
+	movement.addCellMovement(getCellMovementInput(piece));
+
+	// Making the Movement
 	board->makeMove(movement);
 }
 

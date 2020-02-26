@@ -3,6 +3,7 @@
 #include "Player.h"
 #include "InputInterface.h"
 #include "LPieceMovement.h"
+#include "NPieceMovement.h"
 #include "Piece.h"
 #include "Inputs.h"
 #include "PieceMovement.h"
@@ -19,6 +20,7 @@ public:
 	void indicationForSelectingNetrualPiece();
 	void inputForNeutralPiece();
 	void lPieceMovement(Board* board);
+	void nPieceMovement(Board* board);
 	CellMovement getCellMovementInput(Piece piece);
 	void endTurn();
 
@@ -28,4 +30,5 @@ private:
 	Piece m_Piece;
 	Input m_Input;
 	int m_turnOrder;
+	int m_selectedNeutral;
 };
