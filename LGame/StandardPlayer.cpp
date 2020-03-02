@@ -17,7 +17,10 @@ void StandardPlayer::playTurn(Board* board)
 	indicationForMovingNetrualPiece();
 	indicationForSelectingNetrualPiece();
 	inputForNeutralPiece();
-	nPieceMovement(board);
+	if (m_selectedNeutral != 0)
+	{
+		nPieceMovement(board);
+	}
 	endTurn();
 }
 void StandardPlayer::indicationForSelectingLPiece()
